@@ -10,29 +10,29 @@ import com.jiaqu.icb.pojo.order.submit.OrderSubmission;
  */
 public enum IcbOrderSubmitForXmlEnum {
 
-	instname("合作机构名称",""),
-	subinstid("机构二级商户编号",""),
-	subinstname("机构二级商户名称",""),
+	instname("合作机构名称","驾趣"),
+	subinstid("机构二级商户编号","001"),
+	subinstname("机构二级商户名称","驾校验证"),
 	userid("合作机构用户编号",""),
-	username("合作机构用户名称",""),
+	username("合作机构用户名称","15394338986"),
 	trxplat("网络交易平台",""),
-	notifyurl("商户通知URL",""),
+	notifyurl("商户通知URL","http://corbett.tunnel.qydev.com/jiaqugs/icb/order-msg-rec"),
 	notifytype("通知类型","0"),
 	jumpurl("商户跳转URL",""),
-	txchannel("交易渠道","41"),
-	settlegroup("清算组别",""),
-	enabledpmd("支付方式",""),
+	txchannel("交易渠道","24"),
+	settlegroup("清算组别","0"),
+	enabledpmd("支付方式","0010"),
 	installmenttimes("分期付款期数","1"),
 	credittype("支持订单支付的银行卡种类","2"),
 	varnote("返回合作机构变量",""),
-	instreference("如果上送，工行会在客户支付订单时，校验商户上送域名与客户跳转工行支付页面之前网站域名的一致性。",""),
+	instreference("如果上送，工行会在客户支付订单时，校验商户上送域名与客户跳转工行支付页面之前网站域名的一致性。","http://corbett.tunnel.qydev.com/jiaqugs"),
 	b2caccountno("B2C收款账号",""),
 	b2caccountname("B2C收款户名",""),
 	c2caccountno("C2C收款账号",""),
 	c2caccountname("C2C收款户名",""),
 	b2baccountno("B2B收款账号",""),
 	b2baccountname("B2B收款户名",""),
-	jumptype("是否显示支付成功页面","1"),
+	jumptype("是否显示支付成功页面","0"),
 	cardtype("卡类型","000"),
 	ispayamt("是否显示应付金额","1"),
 	isdescription("是否显示描述信息","1"),	
@@ -91,8 +91,8 @@ public enum IcbOrderSubmitForXmlEnum {
 		orderSubmission.setB2baccountname(b2baccountname.getValue());
 		orderSubmission.setJumptype(Integer.valueOf(jumptype.getValue()));
 		
-		Rd rd = new Rd();
-		rd.setCardtype(Integer.valueOf(cardtype.getValue()));
+		Rd rd = orderSubmission.getRd();
+		rd.setCardtype(cardtype.getValue());
 		rd.setIspayamt(Integer.valueOf(ispayamt.getValue()));
 		rd.setIsdescription(Integer.valueOf(isdescription.getValue()));
 		orderSubmission.setRd(rd);

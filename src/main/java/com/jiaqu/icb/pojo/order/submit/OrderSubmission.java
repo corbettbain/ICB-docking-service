@@ -9,7 +9,7 @@ import com.jiaqu.icb.pojo.order.publics.Rd;
  */
 public class OrderSubmission {
 
-	private Integer transtime;//交易时间
+	private Long transtime;//交易时间
 	
 	private String orderno;//订单编号
 	
@@ -53,7 +53,7 @@ public class OrderSubmission {
 	
 	private String instcustomip;//客户端IP
 	
-	private Integer mobileno;//手机号
+	private String mobileno;//手机号
 	
 	private String b2caccountno;//B2C收款账号
 	
@@ -81,11 +81,11 @@ public class OrderSubmission {
 	
 	private Rd rd;//支付信息
 
-	public Integer getTranstime() {
+	public Long getTranstime() {
 		return transtime;
 	}
 
-	public void setTranstime(Integer transtime) {
+	public void setTranstime(Long transtime) {
 		this.transtime = transtime;
 	}
 
@@ -257,12 +257,12 @@ public class OrderSubmission {
 		this.instcustomip = instcustomip;
 	}
 
-	public Integer getMobileno() {
+	public String getMobileno() {
 		return mobileno;
 	}
 
-	public void setMobileno(Integer mobileno) {
-		this.mobileno = mobileno;
+	public void setMobileno(String i) {
+		this.mobileno = i;
 	}
 
 	public String getB2caccountno() {
@@ -384,11 +384,11 @@ public class OrderSubmission {
 				+ note2 + ", note3=" + note3 + ", note4=" + note4 + ", note5=" + note5 + ", rd=" + rd + "]";
 	}
 
-	public OrderSubmission(Integer transtime, String orderno, String instname, String subinstid, String subinstname,
+	public OrderSubmission(Long transtime, String orderno, String instname, String subinstid, String subinstname,
 			String userid, String username, String trxplat, String goodsid, String goodsname, String notifyurl,
 			String notifytype, String jumpurl, Integer orderamount, Integer txchannel, String settlegroup,
 			String enabledpmd, Integer installmenttimes, Integer credittype, String varnote, String instreference,
-			String instcustomip, Integer mobileno, String b2caccountno, String b2caccountname, String c2caccountno,
+			String instcustomip, String mobileno, String b2caccountno, String b2caccountname, String c2caccountno,
 			String c2caccountname, String b2baccountno, String b2baccountname, Integer jumptype, String note1,
 			String note2, String note3, String note4, String note5, Rd rd) {
 		super();

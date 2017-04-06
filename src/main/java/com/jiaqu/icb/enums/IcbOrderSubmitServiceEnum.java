@@ -2,9 +2,9 @@ package com.jiaqu.icb.enums;
 
 public enum IcbOrderSubmitServiceEnum {
 
-	apiurl("",""),
-	apiname("",""),
-	appid("",""),
+	apiurl("","http://114.255.225.27/api"),
+	apiname("","com.icbc.gyj.ordersubmittest"),
+	appid("被调用方的id","12020000000000013044"),
 	;
 	
 	private String description;

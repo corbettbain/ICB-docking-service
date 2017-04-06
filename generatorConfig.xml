@@ -1,1 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<classPathEntry
+		location="D:\myFiles\maven_jars\maven_jar\mysql\mysql-connector-java\5.1.30\mysql-connector-java-5.1.30.jar" />
+	<context id="context1">
+		<jdbcConnection connectionURL="jdbc:mysql://127.1.0.0:3306/doit_wx"
+			driverClass="com.mysql.jdbc.Driver" password="root" userId="root" />
+		<javaModelGenerator targetPackage="com.cn.hnust.pojo"
+			targetProject="wxdoit/src/main/java" />
+		<sqlMapGenerator targetPackage="com.cn.hnust.mapping"
+			targetProject="wxdoit/src/main/java" />
+		<javaClientGenerator targetPackage="com.cn.hnust.dao"
+			targetProject="wxdoit/src/main/java" type="XMLMAPPER" />
+<!-- 		<table schema="db_35kk8_develop_sql" tableName="activity_limit"> -->
+<!-- 			<columnOverride column="id" property="id" /> -->
+<!-- 			<columnOverride column="main_type" property="mainType" -->
+<!-- 				javaType="com.ndc.skd.enums.ActivityLimitMainType" typeHandler="org.apache.ibatis.type.EnumOrdinalTypeHandler" /> -->
+<!-- 			<columnOverride column="limit_type" property="limitType" -->
+<!-- 				javaType="com.ndc.skd.enums.ActivityLimitType" typeHandler="org.apache.ibatis.type.EnumOrdinalTypeHandler" /> -->
+<!-- 			<columnOverride column="main_id" property="mainId" /> -->
+<!-- 			<columnOverride column="limit_id" property="limitId" /> -->
+<!-- 		</table> -->
+		<table schema="doit_wx" tableName="joke">
+			<columnOverride column="joke_id" property="id" />
+			<columnOverride column="joke_content" property="content"/>
+			<columnOverride column="joke_pic" property="pic"/>
+			<columnOverride column="joke_addtime" property="addtime"/>
+		</table>
+	</context>
+</generatorConfiguration>

@@ -10,6 +10,6 @@ import javax.servlet.http.HttpServletResponse;
  */
 public interface ICBOrderMessageRecService {
 
-	Object orderMessageRec(HttpServletRequest request,HttpServletResponse response);
+	Object orderMessageRec(HttpServletRequest request,HttpServletResponse response) throws Exception;
 	
 }

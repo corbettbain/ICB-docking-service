@@ -4,19 +4,11 @@ import java.util.Map;
 
 public class Result{
 
-	private Integer errorcode;
+	private Integer flag;
 	
 	private String message;
 	
-	private Map<String, Object> data;
-
-	public Integer getErrorcode() {
-		return errorcode;
-	}
-
-	public void setErrorcode(Integer errorcode) {
-		this.errorcode = errorcode;
-	}
+	private Object data;
 
 	public String getMessage() {
 		return message;
@@ -26,29 +18,40 @@ public class Result{
 		this.message = message;
 	}
 
-	public Map<String, Object> getData() {
+	public Object getData() {
 		return data;
 	}
 
-	public void setData(Map<String, Object> data) {
+	public void setData(Object data) {
 		this.data = data;
+	}
+
+	
+
+	public Integer getFlag() {
+		return flag;
+	}
+
+	public void setFlag(Integer flag) {
+		this.flag = flag;
 	}
 
 	@Override
 	public String toString() {
-		return "Result [errorcode=" + errorcode + ", message=" + message + ", data=" + data + "]";
+		return "Result [flag=" + flag + ", message=" + message + ", data=" + data + "]";
 	}
 
-	public Result(Integer errorcode, String message, Map<String, Object> data) {
+	public Result(Integer flag, String message, Object data) {
 		super();
-		this.errorcode = errorcode;
+		this.flag = flag;
 		this.message = message;
 		this.data = data;
 	}
 
-	public Result() {
-		this.errorcode = 200;
+	public Result(Object data) {
+		this.flag = 1;
 		this.message = "success";
+		this.data = data;
 	}
 	
 }

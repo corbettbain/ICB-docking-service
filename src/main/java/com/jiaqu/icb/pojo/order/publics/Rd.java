@@ -7,7 +7,7 @@ package com.jiaqu.icb.pojo.order.publics;
  */
 public class Rd {
 
-	private Integer cardtype;//卡类型
+	private String cardtype;//卡类型
 	
 	private Integer payamount;//应付金额
 	
@@ -17,11 +17,11 @@ public class Rd {
 	
 	private Integer isdescription;//是否显示描述信息
 
-	public Integer getCardtype() {
+	public String getCardtype() {
 		return cardtype;
 	}
 
-	public void setCardtype(Integer cardtype) {
+	public void setCardtype(String cardtype) {
 		this.cardtype = cardtype;
 	}
 
@@ -63,7 +63,7 @@ public class Rd {
 				+ description + ", isdescription=" + isdescription + "]";
 	}
 
-	public Rd(Integer cardtype, Integer payamount, Integer ispayamt, String description, Integer isdescription) {
+	public Rd(String cardtype, Integer payamount, Integer ispayamt, String description, Integer isdescription) {
 		super();
 		this.cardtype = cardtype;
 		this.payamount = payamount;
@@ -75,4 +75,5 @@ public class Rd {
 	public Rd() {
 		// TODO Auto-generated constructor stub
 	}
+
 }

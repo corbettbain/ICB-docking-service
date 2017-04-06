@@ -36,7 +36,7 @@ public enum IcbOrderMessageRecServiceEnum {
 	/**
 	 * 公钥地址
 	 */
-	pubceraddr(""),//公钥证书地址
+	pubceraddr("F:/pub.cer"),//公钥证书地址
 	;
 	
 	private String value;

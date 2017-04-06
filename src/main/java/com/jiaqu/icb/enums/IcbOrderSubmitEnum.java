@@ -7,9 +7,9 @@ package com.jiaqu.icb.enums;
  */
 public enum IcbOrderSubmitEnum {
 
-	version("接口版本,1.0.0.0",""),
-	merid("合作机构编号",""),
-	trancode("交易编码",""),
+	version("接口版本,1.0.0.0","1.0.0.0"),
+	merid("合作机构编号","12020000000000013044"),
+	trancode("交易编码","ordersubmit"),
 	charset("编码字符集，base64编码中使用的字符","utf-8"),
 	;
 	
