@@ -1,11 +1,12 @@
 package com.jiaqu.icb.service.icbsubmit.impl;
 
 import java.io.IOException;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.log4j.Logger;
-import org.springframework.stereotype.Service;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.icbc.api.codec.Base64;
 import com.icbc.api.core.ApiClient;
@@ -17,16 +18,17 @@ import com.jiaqu.icb.enums.IcbOrderSubmitForXmlEnum;
 import com.jiaqu.icb.enums.IcbOrderSubmitServiceEnum;
 import com.jiaqu.icb.pojo.order.submit.OrderSubmission;
 import com.jiaqu.icb.service.icbsubmit.ICBOrderSubmitService;
+import com.jiaqu.icb.util.IcbStatic;
 import com.jiaqu.icb.util.xml.XmlUtil;
 
-@Service
 public class ICBOrderSubmitServiceImpl implements ICBOrderSubmitService{
 
-	private Logger logger = Logger.getLogger(ICBOrderSubmitServiceImpl.class);
+	private Logger logger = LoggerFactory.getLogger(ICBOrderSubmitServiceImpl.class);
 	
 	@Override
 	public String orderSunmit(HttpServletRequest request, HttpServletResponse response,OrderSubmission orderSubmission) throws IOException, ApiException {
 		
+		System.out.println(IcbStatic.apiname);
 		//私钥
 			String priKey = IcbKey.rsaprivatekey.getKey();
 					

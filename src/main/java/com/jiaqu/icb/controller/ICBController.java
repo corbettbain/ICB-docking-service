@@ -35,8 +35,8 @@ public class ICBController {
 
 		try {
 			
-			orderSubmission.setGoodsid("12");
-			orderSubmission.setGoodsname("1231");
+			orderSubmission.setGoodsid("1221311212");
+			orderSubmission.setGoodsname("1231232331wq");
 			orderSubmission.setOrderamount(1);
 			
 			Rd rd = new Rd();
@@ -51,7 +51,7 @@ public class ICBController {
 			orderSubmission.setNote3("");
 			orderSubmission.setNote4("");
 			orderSubmission.setNote5("");
-			orderSubmission.setMobileno("15394338986");
+//			orderSubmission.setMobileno("18657166109");
 			String html = iCBOrderSubmitService.orderSunmit(request, response, orderSubmission);
 			return  new Result(html);
 		} catch (Exception e) {

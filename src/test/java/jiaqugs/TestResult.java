@@ -7,6 +7,8 @@ import java.util.Map;
 
 import com.jiaqu.icb.pojo.order.publics.Rd;
 import com.jiaqu.icb.pojo.user.User;
+import com.jiaqu.icb.util.PropertiesUtil;
+import com.jiaqu.icb.util.date.DateFormat;
 
 public class TestResult {
 
@@ -71,6 +73,14 @@ public class TestResult {
 		List<Rd> rds = new ArrayList<>();
 		rds.add(new Rd());
 		TestResult testResult = new TestResult(1, "2", User.class.getSimpleName(),users,Rd.class.getSimpleName(), rds);
-		System.out.println(testResult);
+		System.out.println( System.getProperty("configurePath"));
+		
+		System.out.println(Long.parseLong(DateFormat.dateFormat("yyMMddHHmmss")));
+		
+		String ssString = PropertiesUtil.getStringByKey("b2baccountno","icb.properties");
+		System.out.println(ssString);
+		System.err.println("但是你是多少".indexOf("你"));
+	
+		
 	}
 }

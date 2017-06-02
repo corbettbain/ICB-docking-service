@@ -3,6 +3,7 @@ package com.jiaqu.icb.util.ecode;
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 
+@SuppressWarnings("restriction")
 public class EcodeUtil {
 
 	/**
@@ -11,7 +12,6 @@ public class EcodeUtil {
 	 * @param charset
 	 * @return
 	 */
-	@SuppressWarnings("restriction")
 	public static String base64Decode(String data,String charset){
 		BASE64Decoder b64dec = new BASE64Decoder();
 		try {
@@ -28,7 +28,6 @@ public class EcodeUtil {
 	 * @param charset
 	 * @return
 	 */
-	@SuppressWarnings("restriction")
 	public static String base64Encode(String data,String charset){
 		BASE64Encoder b64enc = new BASE64Encoder();
 	    try {

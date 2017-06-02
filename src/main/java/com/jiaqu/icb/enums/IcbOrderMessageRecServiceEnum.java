@@ -1,5 +1,7 @@
 package com.jiaqu.icb.enums;
 
+import com.jiaqu.icb.util.IcbStatic;
+
 public enum IcbOrderMessageRecServiceEnum {
 
 	/**
@@ -8,7 +10,7 @@ public enum IcbOrderMessageRecServiceEnum {
 	/**
 	 * 订单通知-ORDER
 	 */
-	transtype("ORDER"),//订单通知-ORDER
+	transtype(IcbStatic.transtype),//订单通知-ORDER
 	/**
 	 * 版本号
 	 */
@@ -32,11 +34,11 @@ public enum IcbOrderMessageRecServiceEnum {
 	/**
 	 * 编码格式
 	 */
-	charset("UTF-8"),
+	charset(IcbStatic.charset),
 	/**
 	 * 公钥地址
 	 */
-	pubceraddr("F:/pub.cer"),//公钥证书地址
+	pubceraddr(IcbStatic.pubceraddr),//公钥证书地址"F:/pub.cer"
 	;
 	
 	private String value;
